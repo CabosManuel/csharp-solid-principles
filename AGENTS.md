@@ -2,12 +2,14 @@
 
 ## Repository overview
 - Demonstrates the five SOLID principles with small C#/.NET projects.
+- Uses .NET 10 for the project examples.
 - Each numbered folder is a separate principle example:
   - `1-SingleResponsability`
   - `2-OpenClose`
   - `3-LiskovSubstitution`
   - `4-InterfaceSegregation`
   - `5-DependencyInversion`
+- These folders are study/example projects for a course, and commits may evolve as lessons are applied.
 - `5-DependencyInversion/Api` is an ASP.NET-style dependency inversion example with `Api.Tests` for unit tests.
 
 ## Recommended commands
