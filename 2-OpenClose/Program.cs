@@ -1,34 +1,18 @@
 ﻿using OpenClose;
+using System.Globalization;
 
-CalculateSalaryMonthly(new List<object>() {
+// Actualizar la configuración regional para mostrar el formato de moneda en soles peruanos
+CultureInfo.CurrentCulture = new CultureInfo("es-PE");
+
+CalculateSalaryMonthly(new List<Employee>() {
     new EmployeeFullTime("Pepito Pérez", 160),
-    new EmployeePartTime("Manuel Lopera", 180)
+    new EmployeePartTime("Manuel Lopera", 180),
+    new EmployeeContractor("Manuel Cabos", 160)
 });
 
 
-void CalculateSalaryMonthly(List<object> employees) 
+void CalculateSalaryMonthly(List<Employee> employees)
 {
     foreach (var employee in employees)
-    {
-        if (employee is EmployeeFullTime) 
-        {
-            decimal hourValue = 30000M;
-            EmployeeFullTime employeeFullTime = ((EmployeeFullTime)employee);
-            decimal salary = hourValue * employeeFullTime.HoursWorked;
-            Console.WriteLine($"Empleado: {employeeFullTime.Fullname}, Pago: {salary:C1} ");
-        }
-        else 
-        {
-            decimal hourValue = 20000M;
-            EmployeePartTime employeePartTime = ((EmployeePartTime)employee);
-            decimal salary = hourValue * employeePartTime.HoursWorked;
-            if (employeePartTime.HoursWorked > 160) {
-                decimal effortCompensation = 5000M;
-                int extraDays = employeePartTime.HoursWorked - 160;
-                salary += effortCompensation * extraDays;
-            }
-            Console.WriteLine($"Empleado: {employeePartTime.Fullname}, Pago: {salary:C1} ");
-        }
-    }
-
+        Console.WriteLine($"Empleado: {employee.Fullname}, Pago: {employee.CalculateSalaryMonthly():C2} ");
 }

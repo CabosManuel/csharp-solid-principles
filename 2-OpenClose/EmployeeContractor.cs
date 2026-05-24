@@ -1,8 +1,8 @@
 namespace OpenClose;
 
-public class EmployeeFullTime: Employee
+public class EmployeeContractor: Employee
 {
-    public EmployeeFullTime(string fullname, int hoursWorked)
+    public EmployeeContractor(string fullname, int hoursWorked)
         :base(fullname, hoursWorked)
     {
         Fullname = fullname;
@@ -11,7 +11,7 @@ public class EmployeeFullTime: Employee
 
     public override decimal CalculateSalaryMonthly()
     {
-        decimal hourValue = 30000M;
+        decimal hourValue = 40000M;
         decimal salary = HoursWorked * hourValue;
 
         return salary;
