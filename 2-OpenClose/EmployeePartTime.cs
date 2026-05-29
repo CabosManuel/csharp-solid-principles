@@ -1,6 +1,6 @@
 namespace OpenClose;
 
-public class EmployeePartTime: Employee
+public class EmployeePartTime: Employee, IEmployee
 {
     public EmployeePartTime(string fullname, int hoursWorked)
         : base(fullname, hoursWorked)
@@ -9,7 +9,7 @@ public class EmployeePartTime: Employee
         HoursWorked = hoursWorked;
     }
 
-    public override decimal CalculateSalaryMonthly()
+    public decimal CalculateSalaryMonthly()
     {
         decimal hourValue = 20000M;
         decimal salary = HoursWorked * hourValue;
