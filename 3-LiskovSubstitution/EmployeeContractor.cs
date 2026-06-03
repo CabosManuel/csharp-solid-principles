@@ -1,11 +1,16 @@
-namespace Liskov
+namespace Liskov;
+
+public class EmployeeContractor : Employee
 {
-    public class EmployeeContractor : Employee
+    public EmployeeContractor(
+        string fullname,
+        int hoursWorked,
+        int hourValue = 40
+    ) :base(fullname, hoursWorked, hourValue) {}
+
+    public override decimal CalculateSalary()
     {
-        public EmployeeContractor(
-            string fullname,
-            int hoursWorked,
-            int hourValue = 40
-        ) :base(fullname, hoursWorked) {}
+        return HourValue * HoursWorked;
     }
 }
+
