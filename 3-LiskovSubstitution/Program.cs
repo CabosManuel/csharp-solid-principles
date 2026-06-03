@@ -5,12 +5,12 @@ CalculateSalaryMonthly(new List<Employee>() {
     new EmployeeContractor("Manuel Lopera", 180, 0)
 });
 
-void CalculateSalaryMonthly(List<Employee> employees) 
+void CalculateSalaryMonthly(List<Employee> employees)
 {
-    foreach (var item in employees)
+    foreach (var employee in employees)
     {
-        decimal salary = item.CalculateSalary((item is EmployeeFullTime));
-        Console.WriteLine($"The {item.Fullname}'s salary is {salary}");
-        
+        decimal salary = employee.CalculateSalary();
+        Console.WriteLine($"The {employee.Fullname}'s salary is {salary}");
+
     }
 }
