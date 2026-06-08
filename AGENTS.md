@@ -1,5 +1,10 @@
 # AI Agent Guidance for csharp-solid-principles
 
+## Supported AI Assistants
+This repository is configured for both **GitHub Copilot** and **OpenCode**.
+- `.github/agents/` and `.github/instructions/` target GitHub Copilot.
+- `.opencode/agents/` and `.opencode/skills/` target OpenCode.
+
 ## Repository Overview
 - This repository is a study project for learning C#, .NET, refactoring, and the SOLID principles.
 - The examples in this repository target .NET 10 (`net10.0`).

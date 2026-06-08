@@ -32,11 +32,14 @@ Cada carpeta contiene su propio ejemplo y ahora también puede contener una guí
 4. Continúa con `4-InterfaceSegregation` para separar capacidades por rol.
 5. Termina con `5-DependencyInversion`, donde ya aparecen ASP.NET, controller, dependencias y pruebas.
 
-## Cómo usar Copilot en este repo
+## Cómo usar Copilot / OpenCode en este repo
 
-La configuración del proyecto está pensada para que Copilot actúe más como tutor que como generador automático de respuestas.
+La configuración del proyecto está pensada para que actúe más como tutor que como generador automático de respuestas.
 
-Si quieres reforzar todavía más ese comportamiento, puedes seleccionar el agente personalizado `Study Teacher` desde el selector de agentes de Copilot Chat.
+Si quieres reforzar todavía más ese comportamiento:
+
+- **Copilot**: selecciona el agente personalizado `Study Teacher` desde el selector de agentes de Copilot Chat.
+- **OpenCode**: usa el agente `Study Teacher` o activa el skill `study-mode` para un comportamiento guiado.
 
 Úsalo así:
 
@@ -51,7 +54,7 @@ Si quieres reforzar todavía más ese comportamiento, puedes seleccionar el agen
 
 1. Lee el código sin tocar nada y anota qué te incomoda o qué no entiendes.
 2. Abre el `LEARNING.md` de esa carpeta y responde las preguntas antes de cambiar código.
-3. Pide a Copilot una pista o un diagnóstico, no la solución completa.
+3. Pide al asistente una pista o un diagnóstico, no la solución completa.
 4. Haz un refactor pequeño.
 5. Vuelve a pedir revisión: qué mejoró, qué sigue mal y qué opción sería más mantenible.
 6. Ejecuta el proyecto o las pruebas disponibles para validar.
